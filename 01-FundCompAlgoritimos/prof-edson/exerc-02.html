@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio-02</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    <!-- Criaando Array -->
+    var frutas = ["Banana", "Laranja", "Maçã", "Manga", "Uva"];
+    console.log("-------------------------------------");
+    var novaFruta = window.prompt("Digite o nome de uma nova fruta para adicionar:");
+    frutas.push(novaFruta);
+    console.log("PUSH - Nova fruta inserida final [" + frutas + "]"); // Banana,Laranja,Maçã,Manga,Uva,Limão
+    console.log("-------------------------------------");
+
+    var removeUltimaFruta = frutas.pop();
+    console.log("POP - Ultima fruta removida [" + frutas + "]");
+    console.log("-------------------------------------");
+
+    var removePrimeiraFruta = frutas.shift();
+    console.log("SHIFT - Primeira fruta removida [" + frutas + "]");
+    console.log("-------------------------------------");
+    
+</script>
+
+</html>

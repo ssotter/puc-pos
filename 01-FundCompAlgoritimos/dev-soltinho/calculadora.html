@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang=”pt-br”>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+
+<body>
+    <input placeholder="Digite o primeiro valor:" id="value1" />
+    <br>
+    <input placeholder="Digite o segundo valor:" id="value2" />
+    <br>
+    <button onclick="soma()">Somar</button>
+    <button onclick="multiplicacao()">Multiplicar</button>
+    <button onclick="divisao()">Dividir </button>
+    <button onclick="subtracao()">Subtrair</button>
+    <br><br>
+<div id="resultado"></div>
+</body>
+<script>
+    function soma () {
+        var soma = parseFloat(value1.value) + parseFloat(value2.value);
+        return document.getElementById("resultado").innerHTML = 'A soma é ' + soma;
+    }
+    function multiplicacao () {
+        var multiplicacao = value1.value * value2.value;
+        return document.getElementById('resultado').innerHTML = 'A multiplicação é ' + multiplicacao;
+    }
+    function divisao () {
+        var divisao = value1.value / value2.value;
+        return document.getElementById('resultado').innerHTML = 'A divisão é ' + divisao;
+    }
+    function subtracao () {
+        var subtracao = parseFloat(value1.value) - parseFloat(value2.value);
+        return document.getElementById('resultado').innerHTML = 'A subtração é ' + subtracao;
+    }
+</script>
+</html>
+

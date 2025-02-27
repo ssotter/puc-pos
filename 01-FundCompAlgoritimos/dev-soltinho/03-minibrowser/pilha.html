@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>[Pilha/Stack]</title>
+  </head>
+  <body></body>
+  <script>
+    //LIFO - Stack
+    console.log("Pilha/Stack");
+    class BrowserHistoryStack {
+      constructor() {
+        this.data = [];
+      }
+
+      push(item) {
+        this.data.push(item);
+      }
+
+      back() {
+        // pop()
+        this.data.pop();
+      }
+
+      print() {
+        console.log(this.data);
+      }
+    }
+
+    const history = new BrowserHistoryStack();
+    history.push("google.com");
+    history.push("youtube.com");
+    history.push("facebook.com");
+    history.print();
+    history.back();
+    history.print();
+  </script>
+</html>

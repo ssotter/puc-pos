@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcula IMC</title>
+</head>
+
+<body>
+    <div class="altura">
+        <p>Digite a altura:
+            <input placeholder="(ex.: 1.70): " id="altura" />
+        </p>
+    </div>
+
+    <div class="peso">
+        <p>Digite o peso:
+            <input placeholder="(ex.: 69.2) " id="peso" />
+        </p>
+    </div>
+
+    <button onclick="calcula()">Calcular</button>
+    <br><br>
+    <div id="resultado"></div>
+</body>
+<script>
+    function calcula() {
+        var imc = peso.value / (altura.value * altura.value);
+        if (imc <= 18.5) {
+            return document.getElementById("resultado").innerHTML = 'O IMC é ' + imc.toFixed(2) + ' - Abaixo do normal';
+        } if (imc > 18.6 && imc < 25) {
+            return document.getElementById("resultado").innerHTML = 'O IMC é ' + imc.toFixed(2) + ' - Normal';
+        } if (imc >= 25 && imc < 30) {
+            return document.getElementById("resultado").innerHTML = 'O IMC é ' + imc.toFixed(2) + ' - Sobrepeso';
+        } if (imc >= 30 && imc < 35) {
+            return document.getElementById("resultado").innerHTML = 'O IMC é ' + imc.toFixed(2) + ' - Obesidade grau I';
+        } if (imc >= 35 && imc < 40) {
+            return document.getElementById("resultado").innerHTML = 'O IMC é ' + imc.toFixed(2) + ' - Obesidade grau II';
+        }
+        return document.getElementById("resultado").innerHTML = 'O IMC é ' + imc.toFixed(2) + ' - Obesidade grau III';
+    }
+</script>
+
+</html>

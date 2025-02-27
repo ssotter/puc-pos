@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Browser</title>
+  </head>
+  <body>
+    <script>
+      // Objetos: Representa coias com multiplos atributos para representá-los
+      var aba1 = {
+        titulo: "Titulo da Aba 1",
+        url: "https://www.google.com",
+      };
+      var aba2 = {
+        titulo: "Titulo da Aba 2",
+        url: "http://www.radiogaucha.com.br",
+      };
+
+      // [ENTRADA]
+      // Arrays: Listas de coisas
+      const abas = [aba1, aba2];
+
+      // [PROCESSAMENTO]
+      for (aba of abas) {
+        console.log(aba.titulo);
+
+        // [OUTPUT]
+        var valorAtualDoHtml = document.body.innerHTML;
+        document.body.innerHTML =
+          valorAtualDoHtml + `<li><a href="${aba.url}">${aba.titulo}<a/></li>`;
+      }
+    </script>
+  </body>
+
+  <!--<link rel="stylesheet" href="style.css" />-->
+</html>
